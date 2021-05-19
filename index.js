@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const { Client } = require("klasa");
 const { Collection } = require("discord.js");
 const config = require("./assets/settings.json");
@@ -39,4 +41,4 @@ client.itemData = require("./assets/items.json");
 
 commandRemover();
 
-client.login(config.token);
+client.login(process.env.TOKEN);

@@ -11,21 +11,21 @@ exports.schemaManager = require("./schemaManager.js");
 /** Removes any unnessesscary commands in the default Klasa framework.
  */
 exports.commandRemover = function () {
-	const cmdNames = ["Admin/load", "Admin/unload", "Admin/transfer", "Admin/reboot"];
-	const GeneralPath = `${process.cwd()}/node_modules/klasa/src/commands/General`;
-	if (existsSync(GeneralPath)) {
-		readdirSync(GeneralPath).forEach((file) => {
-			unlinkSync(`${GeneralPath}/${file}`);
-		});
+	// const cmdNames = ["Admin/load", "Admin/unload", "Admin/transfer", "Admin/reboot"];
+	// const GeneralPath = `${process.cwd()}/node_modules/klasa/src/commands/General`;
+	// if (existsSync(GeneralPath)) {
+	// 	readdirSync(GeneralPath).forEach((file) => {
+	// 		unlinkSync(`${GeneralPath}/${file}`);
+	// 	});
 
-		rmdirSync(GeneralPath);
-	}
+	// 	rmdirSync(GeneralPath);
+	// }
 
-	for (let x = 0; x < cmdNames.length; x++) {
-		if (existsSync(`${process.cwd()}/node_modules/klasa/src/commands/${cmdNames[x]}.js`)) {
-			unlinkSync(`${process.cwd()}/node_modules/klasa/src/commands/${cmdNames[x]}.js`);
-		}
-	}
+	// for (let x = 0; x < cmdNames.length; x++) {
+	// 	if (existsSync(`${process.cwd()}/node_modules/klasa/src/commands/${cmdNames[x]}.js`)) {
+	// 		unlinkSync(`${process.cwd()}/node_modules/klasa/src/commands/${cmdNames[x]}.js`);
+	// 	}
+	// }
 };
 
 /**

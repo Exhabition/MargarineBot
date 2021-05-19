@@ -4,3 +4,4 @@ node_modules/
 bwd/
 assets/settings.json
 assets/MargarineData.sqlite
+.env
